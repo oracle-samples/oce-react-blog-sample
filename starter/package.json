@@ -1,0 +1,50 @@
+{
+  "name": "oce-react-blog-sample",
+  "version": "20.2.3",
+  "description": "",
+  "author": "Oracle America, Inc.",
+  "license": "UPL-1.0",
+  "homepage": "/samples/oce-react-blog-sample",
+  "dependencies": {
+    "contentsdk": "https://samples.mycontentdemo.com/_sitesclouddelivery/renderer/app/sdk/npm/contentsdk-1.1.0.tgz",
+    "prop-types": "^15.7.2",
+    "react": "~16.11.0",
+    "react-dom": "~16.11.0",
+    "react-router-dom": "~5.1.2",
+    "react-scripts": "~3.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "lint": "eslint ./src",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/react": "^9.1.4",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1"
+  },
+  "jest": {
+    "globalSetup": "./global-setup.js"
+  }
+}

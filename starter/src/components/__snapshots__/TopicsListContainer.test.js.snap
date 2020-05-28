@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snaphot testing the TopicsListContainer component Render TopicsListContainer component using static data 1`] = `
+<div>
+  <div>
+    <div
+      data-testid="TopicsListContainer"
+    >
+      <div
+        class="logo"
+        data-testid="Header"
+      >
+        <img
+          alt="Company icon"
+          id="company-thumbnail"
+          src="../../public/logo192.png"
+        />
+        <h1
+          id="company-title"
+        >
+          Café Supremo
+        </h1>
+        <ul>
+          <li>
+            <a
+              href="https://cloud.oracle.com/content"
+              id="about"
+            >
+              About Us
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.oracle.com/index.html#u02contactmenu"
+              id="contact"
+            >
+              Contact Us
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        id="topics"
+      >
+        <div
+          class="topic"
+        >
+          <a
+            href="/articles/CORE7194D7588AED4E34B5E789BEC5880BEE?topicName=Drinks"
+            style="text-decoration: none;"
+          >
+            <div
+              class="button-wrapper"
+            >
+              <div
+                class="button"
+              >
+                Drinks
+              </div>
+            </div>
+            <img
+              alt="Topic Thumbnail"
+              src="http://www.somewhere.com/CONT622EA121969E4B0393A4170B3A9E51CD.png"
+            />
+            <div
+              class="desc-wrapper"
+            >
+              <div
+                class="description"
+              >
+                Learn about how to create the perfect and sustainable coffee.
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="topic"
+        >
+          <a
+            href="/articles/CORECCEC806D11DC4F22824CDE8A8556D531?topicName=Recipes"
+            style="text-decoration: none;"
+          >
+            <div
+              class="button-wrapper"
+            >
+              <div
+                class="button"
+              >
+                Recipes
+              </div>
+            </div>
+            <img
+              alt="Topic Thumbnail"
+              src="http://www.somewhere.com/CONTAA5E7822A138467EBD24F26D7B724F36.png"
+            />
+            <div
+              class="desc-wrapper"
+            >
+              <div
+                class="description"
+              >
+                Discover the recipes for making the perfect Meringue, creating the cake batter the right way and more.
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="topic"
+        >
+          <a
+            href="/articles/CORE97B91CFA94644E55B782F13AE76AFB05?topicName=How To"
+            style="text-decoration: none;"
+          >
+            <div
+              class="button-wrapper"
+            >
+              <div
+                class="button"
+              >
+                How To
+              </div>
+            </div>
+            <img
+              alt="Topic Thumbnail"
+              src="http://www.somewhere.com/CONTDAB9D531C5BC46B9A8A6A62F4DDAC944.png"
+            />
+            <div
+              class="desc-wrapper"
+            >
+              <div
+                class="description"
+              >
+                Learn about how to create beautiful Latte art and pouring just the right cup.
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Validation of the ArticlesListContainer component Render the articles list for a specific container 1`] = `
+<div>
+  <div
+    data-testid="ArticlesListContainer"
+  >
+    <div
+      data-testid="ArticlesList"
+    >
+      <div
+        id="breadcrumb"
+      >
+        <ul>
+          <li>
+            <a
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            How%20To
+          </li>
+        </ul>
+      </div>
+      <div
+        id="articles"
+      >
+        <div>
+          <div
+            class="article"
+          >
+            <a
+              href="/article/COREC290E8ABC4354431863218B6C974122B?topicName=How%20To&topicId=CORE3E84C4A3FC084704B0EDE88515BB4506"
+              style="text-decoration: none;"
+            >
+              <div
+                class="title-date"
+              >
+                <h4
+                  class="title"
+                >
+                  Create Beautiful Latte Art!
+                </h4>
+                <div
+                  class="date"
+                >
+                  Posted on May 8, 2019
+                </div>
+              </div>
+              <img
+                src="http://www.somewhere.com/CONT3C779E28717540048AB2C3EF7BEFBFC7.png"
+              />
+              <div
+                class="description"
+              >
+                With a little practice, you can too can create designs with steamed milk.
+              </div>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div
+            class="article"
+          >
+            <a
+              href="/article/COREED6BA23517A148E3A956DCB5A5D39256?topicName=How%20To&topicId=CORE3E84C4A3FC084704B0EDE88515BB4506"
+              style="text-decoration: none;"
+            >
+              <div
+                class="title-date"
+              >
+                <h4
+                  class="title"
+                >
+                  Pouring Just The Right Cup
+                </h4>
+                <div
+                  class="date"
+                >
+                  Posted on May 8, 2019
+                </div>
+              </div>
+              <img
+                src="http://www.somewhere.com/CONT182BF086A70341F3AC90F81F2621903A.png"
+              />
+              <div
+                class="description"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

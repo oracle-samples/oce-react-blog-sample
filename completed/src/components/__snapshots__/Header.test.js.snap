@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the rendering of the Header component Validate Header snapshot 1`] = `
+<div>
+  <div
+    class="logo"
+    data-testid="Header"
+  >
+    <img
+      alt="Company icon"
+      id="company-thumbnail"
+      src="http://www.somewhere.com/image.png"
+    />
+    <h1
+      id="company-title"
+    >
+      My Company
+    </h1>
+    <ul>
+      <li>
+        <a
+          href="http://www.somewhere.com/about"
+          id="about"
+        >
+          About Us
+        </a>
+      </li>
+      <li>
+        <a
+          href="http://www.somewhere.com/contact"
+          id="contact"
+        >
+          Contact Us
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
