@@ -2,7 +2,7 @@
 This repository holds the sample source code for a ReactJS implementation of a blog site powered by Oracle Content and Experience.
 
 Please see the complete tutorial at:
-[https://docs.oracle.com/en/cloud/paas/content-cloud/headless-cms/tutorials.html](https://docs.oracle.com/en/cloud/paas/content-cloud/headless-cms/tutorials.html)
+[https://www.oracle.com/pls/topic/lookup?ctx=cloud&id=oce-react-blog-sample](https://www.oracle.com/pls/topic/lookup?ctx=cloud&id=oce-react-blog-sample)
 
 A live version of this project is available at:
 [https://headless.mycontentdemo.com/samples/oce-react-blog-sample](https://headless.mycontentdemo.com/samples/oce-react-blog-sample)
@@ -23,6 +23,9 @@ and then open [http://localhost:3000/](http://localhost:3000/)
 
 ## Images
 Sample images may be downloaded from [https://www.oracle.com/middleware/technologies/content-experience-downloads.html](https://www.oracle.com/middleware/technologies/content-experience-downloads.html) under a separate license.  These images are provided for reference purposes only and may not hosted or redistributed by you.
+
+## Limitations
+This sample will not work on IE11 without adding polyfills for ES6 features.
 
 ## License
 Copyright (c) 2020 Oracle and/or its affiliates and released under the 
