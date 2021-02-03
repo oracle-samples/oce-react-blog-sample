@@ -1,23 +1,14 @@
 # Blog Site - React
 This repository holds the sample source code for a ReactJS implementation of a blog site powered by Oracle Content and Experience.
 
-Please see the complete tutorial at:
-[https://www.oracle.com/pls/topic/lookup?ctx=cloud&id=oce-react-blog-sample](https://www.oracle.com/pls/topic/lookup?ctx=cloud&id=oce-react-blog-sample)
-
-A live version of this project is available at:
-[https://headless.mycontentdemo.com/samples/oce-react-blog-sample](https://headless.mycontentdemo.com/samples/oce-react-blog-sample)
-
+> **Note:** This branch uses a react app created via create-react-app and uses only client-side rendering.  Please also see the main branch of this repository which holds an equivalent sample built with universal react.
 
 ## Running the project
-> **Note**  
-The __starter__ folder is for developers following instructions in the tutorial where some code must be modified before it can be run.  The __completed__ folder has code that is ready to run.
-
 To build this project:
-> cd completed  
 > npm install
 
 To run using the embedded server code:
-> npm start
+> npm run start
 
 and then open [http://localhost:3000/](http://localhost:3000/)
 
@@ -27,6 +18,9 @@ Sample images may be downloaded from [https://www.oracle.com/middleware/technolo
 ## Limitations
 This sample will not work on IE11 without adding polyfills for ES6 features.
 
+## How to Contribute
+This is an open source project. See [CONTRIBUTING](https://github.com/oracle/oce-react-blog-sample/blob/csr/CONTRIBUTING.md) for details.
+
 ## License
-Copyright (c) 2020 Oracle and/or its affiliates and released under the 
+Copyright (c) 2020, 2021 Oracle and/or its affiliates and released under the 
 [Universal Permissive License (UPL)](https://oss.oracle.com/licenses/upl/), Version 1.0

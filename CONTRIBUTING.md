@@ -4,7 +4,7 @@ We welcome your contributions! There are multiple ways to contribute.
 
 ## Issues
 
-If you hit a bug or have an enhancement request then please file a [GitHub issue](https://github.com/oracle/oce-react-blog-sample/issues).
+If you hit a bug or have an enhancement request then please file a [GitHub issue](https://github.com/oracle/oce-reactcsr-blog-sample/issues).
 When filing a bug remember that the better written the bug is, the more likely it is
 to be fixed. Please include:
 
