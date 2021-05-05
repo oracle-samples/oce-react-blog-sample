@@ -10,18 +10,27 @@ import PropTypes from 'prop-types';
  * React component for rendering the header of the home page
  *
  * @param {string} companyTitle The company's title
- * @param {string} companyThumbnailUrl The URL of the company's icon
+ * @param {string} companyThumbnailRenditionUrls The URL of the company's icon
  * @param {string} aboutUrl The URL for the About link
  * @param {string} contactUrl The URL for the Contact Us link
  */
 const Header = (props) => {
   const {
-    companyTitle, companyThumbnailUrl, aboutUrl, contactUrl,
+    companyTitle, companyThumbnailRenditionUrls, aboutUrl, contactUrl,
   } = props;
 
   return (
     <div className="logo" data-testid="Header">
-      <img id="company-thumbnail" src={companyThumbnailUrl} alt="Company icon" />
+      {companyThumbnailRenditionUrls && (
+        <picture id="company-thumbnail">
+          <source
+            type="image/webp"
+            srcSet={companyThumbnailRenditionUrls.srcset}
+            sizes="(max-width: 480px) 60vw, 25vw"
+          />
+          <img src={companyThumbnailRenditionUrls.native} alt="Company icon" width="{companyThumbnailRenditionUrls.width*.85}" height="{companyThumbnailRenditionUrls.height*.85}" />
+        </picture>
+      )}
       <h1 id="company-title">{companyTitle}</h1>
       <ul>
         <li><a id="about" href={aboutUrl}>About Us</a></li>
@@ -38,7 +47,7 @@ export default Header;
  */
 Header.propTypes = {
   companyTitle: PropTypes.string.isRequired,
-  companyThumbnailUrl: PropTypes.string.isRequired,
+  companyThumbnailRenditionUrls: PropTypes.shape().isRequired,
   aboutUrl: PropTypes.string.isRequired,
   contactUrl: PropTypes.string.isRequired,
 };

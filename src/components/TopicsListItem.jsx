@@ -17,7 +17,7 @@ const TopicsListItem = (props) => {
     id,
     name,
     description,
-    url,
+    renditionUrls,
   } = topic;
 
   return (
@@ -26,9 +26,13 @@ const TopicsListItem = (props) => {
         <div className="button-wrapper">
           <div className="button">{name}</div>
         </div>
-
-        <img src={url} alt="Topic Thumbnail" />
-
+        {renditionUrls && (
+          <picture>
+            <source type="image/webp" srcSet={renditionUrls.srcset} sizes="300px" />
+            <source srcSet={renditionUrls.jpgSrcset} sizes="300px" />
+            <img src={renditionUrls.thumbnail} alt="Topic Thumbnail" />
+          </picture>
+        )}
         <div className="desc-wrapper">
           <div className="description">{description}</div>
         </div>
@@ -44,6 +48,6 @@ TopicsListItem.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     description: PropTypes.string,
-    url: PropTypes.string.isRequired,
+    renditionUrls: PropTypes.shape().isRequired,
   }).isRequired,
 };

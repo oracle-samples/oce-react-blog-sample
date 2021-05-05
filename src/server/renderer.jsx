@@ -46,6 +46,7 @@ export default (req, context) => {
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Sample blog app created in React that utilizes the content sdk library">
 
         <title>Getting Started Blog - React</title>
         <link rel="icon" href="${favIconFile}" type="image/png">

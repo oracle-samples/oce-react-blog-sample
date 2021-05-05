@@ -42,6 +42,7 @@ class ArticlesListPage extends React.Component {
     };
   }
 
+  // executed client side only
   componentDidMount() {
     document.title = 'Articles';
     const { data, topicId } = this.state;
@@ -100,9 +101,9 @@ class ArticlesListPage extends React.Component {
     return (
       <div data-testid="ArticlesListContainer">
         <Breadcrumbs breadcrumbsData={breadcrumbsData} />
-        {data && (
+        {data.articles && (
         <div id="articles">
-          {data.map(
+          {data.articles.map(
             (article) => (
               <ArticlesListItem
                 article={article}
@@ -135,7 +136,7 @@ export default {
 ArticlesListPage.propTypes = {
 
   staticContext: PropTypes.shape({
-    data: PropTypes.arrayOf(PropTypes.shape({})),
+    data: PropTypes.shape(),
     requestQueryParams: PropTypes.shape({
       topicName: PropTypes.string,
     }),

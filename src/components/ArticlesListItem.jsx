@@ -36,7 +36,22 @@ const ArticlesListItem = (props) => {
           <div className="date">{formattedDate}</div>
         </div>
 
-        <img src={article.url} alt="Article thumbnail" />
+        {article.renditionUrls && (
+          <picture>
+            <source
+              type="image/webp"
+              srcSet={article.renditionUrls.srcset}
+              sizes="80px"
+            />
+            <source srcSet={article.renditionUrls.jpgSrcset} sizes="80px" />
+            <img
+              src={article.renditionUrls.small}
+              alt="Article thumbnail"
+              width={article.renditionUrls.width}
+              height={article.renditionUrls.height}
+            />
+          </picture>
+        )}
 
         <div className="description">
           {article.description}
@@ -55,7 +70,7 @@ ArticlesListItem.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     description: PropTypes.string,
-    url: PropTypes.string.isRequired,
+    renditionUrls: PropTypes.shape().isRequired,
     fields: PropTypes.shape({
       published_date: PropTypes.shape({
         value: PropTypes.string.isRequired,

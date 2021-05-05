@@ -228,6 +228,7 @@ body {
 }
 
 .logo ul li a {
+  padding: 12px;
   font-weight: bold;
   color: inherit;
   text-decoration: none;
@@ -433,4 +434,3 @@ body {
     content:"";
   }
 }
-

@@ -64,7 +64,7 @@ class TopicsListPage extends React.Component {
     }
     const {
       companyTitle,
-      companyThumbnailUrl,
+      companyThumbnailRenditionUrls,
       aboutUrl,
       contactUrl,
       topics,
@@ -73,7 +73,7 @@ class TopicsListPage extends React.Component {
       <div data-testid="TopicsListContainer">
         <Header
           companyTitle={companyTitle}
-          companyThumbnailUrl={companyThumbnailUrl}
+          companyThumbnailRenditionUrls={companyThumbnailRenditionUrls}
           aboutUrl={aboutUrl}
           contactUrl={contactUrl}
         />

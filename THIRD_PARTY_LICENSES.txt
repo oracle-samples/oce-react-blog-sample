@@ -1167,37 +1167,23 @@ SOFTWARE.
 ------------------------------- Copyright notices --------------------------
 Copyright (c) Facebook, Inc. and its affiliates.
 ---------------------------- Fourth-party information ----------------------
-== NAME OF DEPENDENCY 1
 js-tokens
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014, 2015, 2016, 2017, 2018 Simon Lydell
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 2
 loose-envify
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2015 Andres Suarez <zertosh@gmail.com>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 3
 object-assign
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 4
 scheduler
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Facebook, Inc. and its affiliates.
 --------------------------------(separator)---------------------------------
 
-== LICENSES
-== Text of license (MIT)
 ---- MIT license ----
 The MIT License (MIT)
 
@@ -1248,23 +1234,15 @@ SOFTWARE.
 ------------------------------- Copyright notices --------------------------
 Copyright (c) React Training 2016-2018
 ---------------------------- Fourth-party information ----------------------
-== NAME OF DEPENDENCY 1
 @babel/runtime
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014-present Sebastian McKenzie and other contributors
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 2
 regenerator-runtime
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014-present, Facebook, Inc.
 --------------------------------(separator)---------------------------------
 
-== LICENSES
-== Text of license (MIT)
 ---- MIT license ----
 MIT License
 
@@ -1315,23 +1293,15 @@ SOFTWARE.
 ------------------------------- Copyright notices --------------------------
 Copyright (c) React Training 2016-2018
 ---------------------------- Fourth-party information ----------------------
-== NAME OF DEPENDENCY 1
 @babel/runtime
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014-present Sebastian McKenzie and other contributors
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 2
 history
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) React Training 2016-2018
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 3
 hoist-non-react-statics
-== License BSD-3-Clause
 Software License Agreement (BSD License)
 
 Copyright (c) 2015, Yahoo! Inc. All rights reserved.
@@ -1359,111 +1329,66 @@ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
 ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-== Copyright Notices
 Copyright (c) 2015, Yahoo! Inc. All rights reserved.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 4
 isarray
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 5
 js-tokens
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014, 2015, 2016, 2017, 2018 Simon Lydell
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 6
 loose-envify
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2015 Andres Suarez <zertosh@gmail.com>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 7
 mini-create-react-context
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2017-2019 James Kyle <me@thejameskyle.com>
 Copyright (c) 2019-present StringEpsilon <StringEpsilon@gmail.com>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 8
 object-assign
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 9
 path-to-regexp
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 10
 prop-types
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2013-present, Facebook, Inc.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 11
 react-is
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Facebook, Inc. and its affiliates.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 12
 react-router
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) React Training 2016-2018
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 13
 regenerator-runtime
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014-present, Facebook, Inc.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 14
 resolve-pathname
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Michael Jackson 2016-2018
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 15
 tiny-invariant
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2019 Alexander Reardon
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 16
 tiny-warning
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2019 Alexander Reardon
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 17
 value-equal
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Michael Jackson 2016-2018
 --------------------------------(separator)---------------------------------
 
-== LICENSES
-== Text of license (MIT)
 ---- MIT license ----
 MIT License
 
@@ -1515,51 +1440,31 @@ SOFTWARE.
 ------------------------------- Copyright notices --------------------------
 Copyright (c) 2017 Raiden
 ---------------------------- Fourth-party information ----------------------
-== NAME OF DEPENDENCY 1
 @types/prop-types
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Microsoft Corporation. All rights reserved.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 2
 js-tokens
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014, 2015, 2016, 2017, 2018 Simon Lydell
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 3
 loose-envify
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2015 Andres Suarez <zertosh@gmail.com>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 4
 object-assign
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 5
 prop-types
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2013-present, Facebook, Inc.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 6
 react-is
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Facebook, Inc. and its affiliates.
 --------------------------------(separator)---------------------------------
 
-== LICENSES
-== Text of license (MIT)
 ---- MIT license ----
 MIT License
 
@@ -1643,23 +1548,15 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ------------------------------- Copyright notices --------------------------
 Copyright 2014 Yahoo! Inc. All rights reserved.
 ---------------------------- Fourth-party information ----------------------
-== NAME OF DEPENDENCY 1
 randombytes
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2017 crypto-browserify
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 2
 safe-buffer
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Feross Aboukhadijeh
 --------------------------------(separator)---------------------------------
 
-== LICENSES
-== Text of license (MIT)
 ---- MIT license ----
 MIT License
 
@@ -1712,23 +1609,15 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ------------------------------- Copyright notices --------------------------
 Copyright (c) 2012-2018 Zongmin Lei(雷宗民) <leizongmin@gmail.com> http://ucdok.com
 ---------------------------- Fourth-party information ----------------------
-== NAME OF DEPENDENCY 1
 commander
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 2
 cssfilter
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2015 老雷
 --------------------------------(separator)---------------------------------
 
-== LICENSES
-== Text of license (MIT)
 ---- MIT license ----
 (The MIT License)
 
@@ -3637,115 +3526,68 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ------------------------------- Copyright notices --------------------------
 Copyright JS Foundation and other contributors
 ---------------------------- Fourth-party information ----------------------
-== NAME OF DEPENDENCY 1
 @types/json-schema
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Microsoft Corporation.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 2
 ajv-keywords
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2016 Evgeny Poberezkin
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 3
 ajv
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2015-2017 Evgeny Poberezkin
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 4
 big.js
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2018 Michael Mclaughlin
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 5
 camelcase
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 6
 colorette
-== License Type
 MIT
-== Copyright Notices
 Copyright © Jorge Bucaran <<https://jorgebucaran.com>>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 7
 cssesc
-== License Type
 MIT
-== Copyright Notices
 Copyright Mathias Bynens <https://mathiasbynens.be/>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 8
 emojis-list
-== License Type
 MIT
-== Copyright Notices
 Copyright © 2015 Kiko Beats
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 9
 fast-deep-equal
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2017 Evgeny Poberezkin
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 10
 fast-json-stable-stringify
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2013 James Halliday
 Copyright (c) 2017 Evgeny Poberezkin
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 11
 icss-utils
-== License Type
 ISC
-== Copyright Notices
 Copyright 2018 Glen Maddern
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 12
 indexes-of
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2013 Dominic Tarr
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 13
 isarray
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 14
 isobject
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014-2016, Jon Schlinkert.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 15
 json-schema-traverse
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2017 Evgeny Poberezkin
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 16
 json5
-== License MIT
 MIT License
 
 Copyright (c) 2012-2018 Aseem Kishore, and [others].
@@ -3769,108 +3611,64 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 [others]: https://github.com/json5/json5/contributors
-== Copyright Notices
 Copyright (c) 2012-2018 Aseem Kishore, and [others].
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 17
 line-column
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2016 IRIDE Monad <iride.monad@gmail.com>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 18
 loader-utils
-== License Type
 MIT
-== Copyright Notices
 Copyright JS Foundation and other contributors
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 19
 minimist
-== License Type
 MIT
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 20
 nanoid
-== License Type
 MIT
-== Copyright Notices
 Copyright 2017 Andrey Sitnik <andrey@sitnik.ru>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 21
 postcss-modules-extract-imports
-== License Type
 ISC
-== Copyright Notices
 Copyright 2015 Glen Maddern
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 22
 postcss-modules-local-by-default
-== License Type
 MIT
-== Copyright Notices
 Copyright 2015 Mark Dalgleish <mark.john.dalgleish@gmail.com>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 23
 postcss-modules-scope
-== License Type
 ISC
-== Copyright Notices
 Copyright (c) 2015, Glen Maddern
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 24
 postcss-modules-values
-== License Type
 ISC
-== Copyright Notices
 Copyright (c) 2015, Glen Maddern
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 25
 postcss-selector-parser
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Ben Briggs <beneb.info@gmail.com> (http://beneb.info)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 26
 postcss-value-parser
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Bogdan Chadkin <trysound@yandex.ru>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 27
 postcss
-== License Type
 MIT
-== Copyright Notices
 Copyright 2013 Andrey Sitnik <andrey@sitnik.ru>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 28
 punycode
-== License Type
 MIT
-== Copyright Notices
 Copyright Mathias Bynens <https://mathiasbynens.be/>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 29
 schema-utils
-== License Type
 MIT
-== Copyright Notices
 Copyright JS Foundation and other contributors
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 30
 semver
-== License Type
 ISC
-== Copyright Notices
 Copyright (c) Isaac Z. Schlueter and Contributors
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 31
 source-map
-== License BSD-3-Clause
 Copyright (c) 2009-2011, Mozilla Foundation and contributors
 All rights reserved.
 
@@ -3898,19 +3696,13 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-== Copyright Notices
 Copyright (c) 2009-2011, Mozilla Foundation and contributors. All rights reserved.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 32
 uniq
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2013 Mikola Lysenko
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 33
 uri-js
-== License BSD-2-Clause
 Copyright 2011 Gary Court. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted 
@@ -3935,19 +3727,13 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 The views and conclusions contained in the software and documentation are those of the authors and 
 should not be interpreted as representing official policies, either expressed or implied, of Gary 
 Court.
-== Copyright Notices
 Copyright 2011 Gary Court. All rights reserved.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 34
 util-deprecate
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014 Nathan Rajlich <nathan@tootallnate.net>
 --------------------------------(separator)---------------------------------
 
-== LICENSES
-== Text of license (ISC)
 ---- ISC license ----
 ISC License (ISC)
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without 
@@ -3960,7 +3746,6 @@ AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR 
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, 
 NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF 
 THIS SOFTWARE.
-== Text of license (MIT)
 ---- MIT license ----
 MIT License
 
@@ -4899,44 +4684,27 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 ------------------------------- Copyright notices --------------------------
 Copyright (c) 2016 Ethan Cohen
 ---------------------------- Fourth-party information ----------------------
-== NAME OF DEPENDENCY 1
 @babel/runtime-corejs3
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014-present Sebastian McKenzie and other contributors
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 2
 @babel/runtime
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014-present Sebastian McKenzie and other contributors
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 3
 aria-query
-== License Type
 Apache-2.0
-== Copyright Notices
 Copyright 2020 A11yance
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 4
 array-includes
-== License Type
 MIT
-== Copyright Notices
 Copyright (C) 2015 Jordan Harband
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 5
 ast-types-flow
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2018 Kyle Davis
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 6
 axe-core
-== License MPL-2.0
 Mozilla Public License, version 2.0
 1. Definitions
 1.1. "Contributor"
@@ -5203,30 +4971,19 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
       With Secondary Licenses", as defined by
       the Mozilla Public License, v. 2.0.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 7
 axobject-query
-== License Type
 Apache-2.0
-== Copyright Notices
 Copyright 2020 A11yance
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 8
 call-bind
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2020 Jordan Harband
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 9
 core-js-pure
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014-2020 Denis Pushkarev
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 10
 damerau-levenshtein
-== License BSD-2-Clause
 BSD 2-Clause License
 Copyright (c) 2018, Tadeusz Łazurski
 All rights reserved.
@@ -5247,124 +5004,73 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-== Copyright Notices
 Copyright (c) 2018, Tadeusz Łazurski. All rights reserved.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 11
 define-properties
-== License Type
 MIT
-== Copyright Notices
 Copyright (C) 2015 Jordan Harband
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 12
 emoji-regex
-== License Type
 MIT
-== Copyright Notices
 Copyright Mathias Bynens <https://mathiasbynens.be/>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 13
 es-abstract
-== License Type
 MIT
-== Copyright Notices
 Copyright (C) 2015 Jordan Harband
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 14
 es-abstract
-== License Type
 MIT
-== Copyright Notices
 Copyright (C) 2015 Jordan Harband
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 15
 es-to-primitive
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2015 Jordan Harband
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 16
 function-bind
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2013 Raynos.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 17
 get-intrinsic
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2020 Jordan Harband
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 18
 has-symbols
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2016 Jordan Harband
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 19
 has
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2013 Thiago de Arruda
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 20
 is-callable
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2015 Jordan Harband
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 21
 is-date-object
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2015 Jordan Harband
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 22
 is-negative-zero
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014 Jordan Harband
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 23
 is-regex
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014 Jordan Harband
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 24
 is-string
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2015 Jordan Harband
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 25
 is-symbol
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2015 Jordan Harband
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 26
 jsx-ast-utils
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2016 Ethan Cohen
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 27
 language-subtag-registry
-== License ODC-By-1.0
 ODC Attribution License (ODC-By)
 Preamble
 The Open Data Commons Attribution License is a license agreement
@@ -5696,57 +5402,34 @@ jurisdiction includes additional rights not granted under this License,
 these additional rights are granted in this License in order to meet the
 terms of this License.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 28
 language-tags
-== License Type
 MIT
-== Copyright Notices
 Copyright © 2020 Matthew Caruana Galizia, http://m.cg <m@m.cg>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 29
 object-inspect
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2013 James Halliday
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 30
 object-keys
-== License Type
 MIT
-== Copyright Notices
 Copyright (C) 2013 Jordan Harband
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 31
 object.assign
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014 Jordan Harband
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 32
 regenerator-runtime
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014-present, Facebook, Inc.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 33
 string.prototype.trimend
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2017 Khaled Al-Ansari
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 34
 string.prototype.trimstart
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2017 Khaled Al-Ansari
 --------------------------------(separator)---------------------------------
-== LICENSES
-== Text of license (Apache-2.0)
 ---- Apache-2.0 license ----
 Apache License
 Version 2.0, January 2004
@@ -5916,7 +5599,6 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-== Text of license (MIT)
 ---- MIT license ----
 MIT License
 Permission is hereby granted, free of charge, to any person obtaining
@@ -6454,170 +6136,99 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ------------------------------- Copyright notices --------------------------
 Copyright JS Foundation and other contributors
 ---------------------------- Fourth-party information ----------------------
-== NAME OF DEPENDENCY 1
 @webpack-cli/info
-== License Type
 MIT
-== Copyright Notices
 Copyright JS Foundation and other contributors
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 2
 @webpack-cli/serve
-== License Type
 MIT
-== Copyright Notices
 Copyright JS Foundation and other contributors
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 3
 ansi-colors
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2015-present, Brian Woodward.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 4
 ansi-styles
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 5
 array-back
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2015-19 Lloyd Brookes <75pound@gmail.com>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 6
 chalk
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 7
 color-convert
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2011-2016 Heather Arthur <fayearthur@gmail.com>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 8
 color-name
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2015 Dmitry Ivanov
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 9
 colorette
-== License Type
 MIT
-== Copyright Notices
 Copyright © Jorge Bucaran <<https://jorgebucaran.com>>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 10
 command-line-usage
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2015-21 Lloyd Brookes <75pound@gmail.com>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 11
 commander
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 12
 cross-spawn
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2018 Made With MOXY Lda <hello@moxy.studio>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 13
 deep-extend
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2013-2018, Viacheslav Lotsmanov
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 14
 end-of-stream
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014 Mathias Buus
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 15
 enquirer
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2016-present, Jon Schlinkert.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 16
 envinfo
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2018 Trevor Brindle
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 17
 escape-string-regexp
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 18
 execa
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 19
 find-up
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 20
 function-bind
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2013 Raynos.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 21
 get-stream
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 22
 has-flag
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 23
 has
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2013 Thiago de Arruda
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 24
 human-signals
-== License Apache-2.0
 Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
@@ -6819,62 +6430,38 @@ Apache License
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-== Copyright Notices
 Copyright 2019 ehmicky <ehmicky@gmail.com>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 25
 import-local
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 26
 interpret
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014-2018 Tyler Kellen <tyler@sleekcode.net>, Blaine Bublitz 
 <blaine.bublitz@gmail.com>, and Eric Schoffstall <yo@contra.io>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 27
 is-core-module
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014 Dave Justice
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 28
 is-stream
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 29
 isexe
-== License Type
 ISC
-== Copyright Notices
 Copyright (c) Isaac Z. Schlueter and Contributors
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 30
 leven
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 31
 locate-path
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 32
 lodash
-== License MIT
 Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
 
 Based on Underscore.js, copyright Jeremy Ashkenas,
@@ -6919,223 +6506,130 @@ Files located in the node_modules and vendor directories are externally
 maintained libraries used by this software which have their own
 licenses; we recommend you read them, as their terms may differ from the
 terms above.
-== Copyright Notices
 Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 33
 merge-stream
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Stephen Sugden <me@stephensugden.com> (stephensugden.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 34
 mimic-fn
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 35
 npm-run-path
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 36
 once
-== License Type
 ISC
-== Copyright Notices
 Copyright (c) Isaac Z. Schlueter and Contributors
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 37
 onetime
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 38
 p-limit
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 39
 p-locate
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 40
 p-try
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 41
 path-exists
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 42
 path-key
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 43
 path-parse
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2015 Javier Blanco
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 44
 pkg-dir
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 45
 pump
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014 Mathias Buus
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 46
 rechoir
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014-2019 Tyler Kellen <tyler@sleekcode.net>, Blaine Bublitz 
 <blaine.bublitz@gmail.com>, and Eric Schoffstall <yo@contra.io>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 47
 reduce-flatten
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2016-18 Lloyd Brookes <75pound@gmail.com>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 48
 resolve-cwd
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 49
 resolve-from
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 50
 resolve
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2012 James Halliday
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 51
 shebang-command
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Kevin Mårtensson <kevinmartensson@gmail.com> (github.com/kevva)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 52
 shebang-regex
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 53
 signal-exit
-== License Type
 ISC
-== Copyright Notices
 Copyright (c) 2015, Contributors
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 54
 strip-final-newline
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 55
 supports-color
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 56
 table-layout
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2015-20 Lloyd Brookes <75pound@gmail.com>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 57
 typical
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014-19 Lloyd Brookes <75pound@gmail.com>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 58
 v8-compile-cache
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2019 Andres Suarez
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 59
 webpack-merge
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2015 Juho Vepsalainen
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 60
 which
-== License Type
 ISC
-== Copyright Notices
 Copyright (c) Isaac Z. Schlueter and Contributors
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 61
 wordwrapjs
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2015-19 Lloyd Brookes <75pound@gmail.com>
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 62
 wrappy
-== License Type
 ISC
-== Copyright Notices
 Copyright (c) Isaac Z. Schlueter and Contributors
 --------------------------------(separator)---------------------------------
 
-== LICENSES
-== Text of license (ISC)
 ---- ISC license ----
 The ISC License
 
@@ -7150,7 +6644,6 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
 IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-== Text of license (MIT)
 ---- MIT license ----
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -7222,51 +6715,31 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ------------------------------- Copyright notices --------------------------
 Copyright (c) 2015 Juho Vepsalainen
 ---------------------------- Fourth-party information ----------------------
-== NAME OF DEPENDENCY 1
 clone-deep
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014-2018, Jon Schlinkert.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 2
 is-plain-object
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014-2017, Jon Schlinkert.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 3
 isobject
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014-2017, Jon Schlinkert.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 4
 kind-of
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2014-2017, Jon Schlinkert.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 5
 shallow-clone
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2015-present, Jon Schlinkert.
 --------------------------------(separator)---------------------------------
-== NAME OF DEPENDENCY 6
 wildcard
-== License Type
 MIT
-== Copyright Notices
 Copyright (c) 2017 Damon Oehlman damon.oehlman@gmail.com
 --------------------------------(separator)---------------------------------
 
-== LICENSES
-== Text of license (MIT)
 ---- MIT license ----
 The MIT License (MIT)
 
@@ -7318,5 +6791,4 @@ SOFTWARE.
 Copyright (c) 2016 Liad Yosef
 ---------------------------- Fourth-party information ----------------------
 
-== LICENSES
 

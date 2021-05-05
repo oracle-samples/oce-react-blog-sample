@@ -94,8 +94,6 @@ class ArticleDetailsPage extends React.Component {
       date,
       content,
       imageCaption,
-      articleImageUrl,
-      authorAvatarUrl,
     } = data;
     // Breadcrumbs :  Home > topicName > articleName (read only)
     // - "Home" url      =  "/"
@@ -130,7 +128,17 @@ class ArticleDetailsPage extends React.Component {
         <div id="article">
           <div className="author">
             {/* Avatar */}
-            <img src={authorAvatarUrl} alt="Author Avatar" />
+            {data.authorRenditionUrls && (
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet={data.authorRenditionUrls.srcset}
+                  sizes="80px"
+                />
+                <source srcSet={data.authorRenditionUrls.jpgSrcset} sizes="80px" />
+                <img src={data.authorRenditionUrls.small} alt="Author Avatar" />
+              </picture>
+            )}
 
             {/*  Author Name / Date */}
             <div className="name_date">
@@ -144,7 +152,18 @@ class ArticleDetailsPage extends React.Component {
 
           {/* Article Image and caption */}
           <figure>
-            <img src={articleImageUrl} alt="Article" />
+            {data.renditionUrls && (
+              <picture>
+                <source type="image/webp" srcSet={data.renditionUrls.srcset} />
+                <source srcSet={data.renditionUrls.jpgSrcset} />
+                <img
+                  src={data.renditionUrls.large}
+                  alt="Article"
+                  width={data.renditionUrls.width}
+                  height={data.renditionUrls.height}
+                />
+              </picture>
+            )}
             <figcaption>{imageCaption}</figcaption>
           </figure>
 

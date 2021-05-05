@@ -31,38 +31,86 @@ function logError(message, error) {
 }
 
 /**
- * Return the medium rendition URL for the specified item.
+ * Flattens an array of arrays into a single array.
+ *
+ * Note:  ES6's array.flat() is not supported in Node pre version 11 so flatten manually.
+ *
+ * @param {Array} inArray - the array of arrays to flatten
+ * @param {Array} result - the flattened array
+ */
+function flattenArray(inArray, result = []) {
+  for (let i = 0, { length } = inArray; i < length; i += 1) {
+    const arrayElement = inArray[i];
+    if (Array.isArray(arrayElement)) {
+      flattenArray(arrayElement, result);
+    } else {
+      result.push(arrayElement);
+    }
+  }
+  return result;
+}
+
+/**
+ * Private method for adding the specified format rendition to the rendition string
+ *
+ * @param {Object} url - the url which contains the rendition strings
+ * @param {Object} rendition - the rendition field of the content sdk json object
+ * @param {String} formatstr - the format string type - either webp or jpg
+ */
+function addRendition(urls, rendition, formatstr) {
+  // Get the webp format field
+  const format = rendition.formats.filter((item) => item.format === `${formatstr}`)[0];
+  const self = format.links.filter((item) => item.rel === 'self')[0];
+  const url = self.href;
+  const { width } = format.metadata;
+
+  // Also save the jpg format so that it can be used as a default value for images
+  if (formatstr === 'jpg') {
+    urls[rendition.name.toLowerCase()] = url;
+    urls.jpgSrcset += `${url} ${width}w,`;
+  } else {
+    urls.srcset += `${url} ${width}w,`;
+  }
+}
+
+/**
+ * Retrieve the sourceset for an asset that is constructed from the rendition
+ *
+ * @param {asset} client - the asset whose fields contain the various renditions
+ * @returns {Object} - An Object containing the the sourceset as well as individual rendition
+ * url that can be used as default src
+ */
+function getSourceSet(asset) {
+  const urls = {};
+  urls.srcset = '';
+  urls.jpgSrcset = '';
+  if (asset.fields && asset.fields.renditions) {
+    asset.fields.renditions.forEach((rendition) => {
+      addRendition(urls, rendition, 'jpg');
+      addRendition(urls, rendition, 'webp');
+    });
+  }
+  // add the native rendition to the srcset as well
+  urls.srcset += `${asset.fields.native.links[0].href} ${asset.fields.metadata.width}w`;
+  urls.native = asset.fields.native.links[0].href;
+  urls.width = asset.fields.metadata.width;
+  urls.height = asset.fields.metadata.height;
+  return urls;
+}
+
+/**
+ * Return the rendition URLs for the specified item.
  *
  * @param {DeliveryClient} client - the delivery client to get data from OCE content
  * @param {string} identifier - the item id whose medium rendition URL is to be obtained
  * @returns {Promise({Object})} - A Promise containing the data
  */
-function getMediumRenditionURL(client, identifier) {
+function getRenditionURLs(client, identifier) {
   return client.getItem({
     id: identifier,
-    fields: 'all',
-    expand: 'all',
-  }).then((asset) => {
-    const object = asset.fields.renditions.filter((item) => item.name === 'Medium')[0];
-    const format = object.formats.filter((item) => item.format === 'jpg')[0];
-    const self = format.links.filter((item) => item.rel === 'self')[0];
-    const url = self.href;
-    return url;
-  }).catch((error) => logError('Fetching medium rendition URL failed', error));
-}
-
-/**
- * Return the rendition URL for the specified item.
- *
- * @param {DeliveryClient} client - the delivery client to get data from OCE content
- * @param {string} identifier - the item id whose rendition URL is to be obtained
- * @return {string} the rendition URL
- */
-function getRenditionURL(client, identifier) {
-  const url = client.getRenditionURL({
-    id: identifier,
-  });
-  return Promise.resolve(url);
+    expand: 'fields.renditions',
+  }).then((asset) => getSourceSet(asset))
+    .catch((error) => logError('Fetching Rendition URLs failed', error));
 }
 
 /* ----------------------------------------------------
@@ -79,15 +127,9 @@ function getRenditionURL(client, identifier) {
 function fetchTopic(client, topicId) {
   return client.getItem({
     id: topicId,
-    fields: 'all',
-    expand: 'all',
+    expand: 'fields.thumbnail',
   }).then((topic) => {
-    // Determine the medium rendition url from the topic itself.
-    const object = topic.fields.thumbnail.fields.renditions.filter((item) => item.name === 'Medium')[0];
-    const format = object.formats.filter((item) => item.format === 'jpg')[0];
-    const assetimg = format.links.filter((item) => item.rel === 'self')[0];
-    const url = assetimg.href;
-    topic.url = url;
+    topic.renditionUrls = getSourceSet(topic.fields.thumbnail);
     return topic;
   }).catch((error) => logError('Fetching topic failed', error));
 }
@@ -110,7 +152,6 @@ function fetchTopic(client, topicId) {
 function fetchHomePage(client) {
   return client.queryItems({
     q: '(type eq "OCEGettingStartedHomePage" AND name eq "HomePage")',
-    fields: 'all',
   }).then((data) => {
     const logoID = data.items[0].fields.company_logo.id;
     const title = data.items[0].fields.company_name;
@@ -137,9 +178,9 @@ function fetchHomePage(client) {
           companyTitle: title,
           aboutUrl,
           contactUrl,
-          topics: allTopics.flat(),
+          topics: flattenArray(allTopics),
         }
-      ));
+      )).catch((error) => logError('Fetching topics failed', error));
   }).catch((error) => logError('Fetching home page data failed', error));
 }
 
@@ -157,12 +198,11 @@ function fetchHomePage(client) {
  */
 export function getTopicsListPageData() {
   const client = getDeliveryClient();
-
   return fetchHomePage(client)
     .then((data) => (
-      getRenditionURL(client, data.logoID)
-        .then((url) => {
-          data.companyThumbnailUrl = url;
+      getRenditionURLs(client, data.logoID)
+        .then((renditionUrls) => {
+          data.companyThumbnailRenditionUrls = renditionUrls;
           return data;
         })
     ));
@@ -189,7 +229,6 @@ export function fetchTopicArticles(topicId) {
   const client = getDeliveryClient();
   return client.queryItems({
     q: `(type eq "OCEGettingStartedArticle" AND fields.topic eq "${topicId}")`,
-    fields: 'all',
     orderBy: 'fields.published_date:desc',
   }).then((data) => {
     const promises = [];
@@ -198,9 +237,9 @@ export function fetchTopicArticles(topicId) {
     articles.forEach((article) => {
       // add a promise to the total list of promises to get the article url
       promises.push(
-        getMediumRenditionURL(client, article.fields.image.id)
-          .then((url) => {
-            article.url = url;
+        getRenditionURLs(client, article.fields.image.id)
+          .then((renditionUrls) => {
+            article.renditionUrls = renditionUrls;
             // Note: the spread operator is used here so that we return a top level
             // object, rather than a value which contains the object
             // i.e we return
@@ -222,7 +261,10 @@ export function fetchTopicArticles(topicId) {
 
     // execute all the promises and return all the data
     return Promise.all(promises)
-      .then((allArticles) => allArticles.flat());
+      .then((allArticles) => ({
+        topicId,
+        articles: flattenArray(allArticles),
+      }));
   }).catch((error) => logError('Fetching topic articles failed', error));
 }
 
@@ -260,26 +302,22 @@ export function fetchArticleDetails(articleId) {
     const content = article.fields.article_content;
     const imageCaption = article.fields.image_caption;
     const { name } = article;
-
-    // get the article image URL
-    return getRenditionURL(client, article.fields.image.id)
-      .then((articleImageUrl) => {
-        const avatarID = article.fields.author.fields.avatar.id;
-        // Get the author's avatar image
-        return getMediumRenditionURL(client, avatarID)
-          .then((authorAvatarUrl) => (
-            // return an object with just the data needed
-            {
-              id: articleId,
-              name,
-              title,
-              date,
-              content,
-              imageCaption,
-              articleImageUrl,
-              authorAvatarUrl,
-            }
-          ));
-      });
+    const renditionUrls = getSourceSet(article.fields.image);
+    const avatarID = article.fields.author.fields.avatar.id;
+    // Get the author's avatar image
+    return getRenditionURLs(client, avatarID)
+      .then((authorRenditionUrls) => (
+        // return an object with just the data needed
+        {
+          id: articleId,
+          name,
+          title,
+          date,
+          content,
+          imageCaption,
+          renditionUrls,
+          authorRenditionUrls,
+        }
+      ));
   }).catch((error) => logError('Fetching article details failed', error));
 }
