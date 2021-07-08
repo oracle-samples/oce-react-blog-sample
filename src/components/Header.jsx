@@ -28,7 +28,7 @@ const Header = (props) => {
             srcSet={companyThumbnailRenditionUrls.srcset}
             sizes="(max-width: 480px) 60vw, 25vw"
           />
-          <img src={companyThumbnailRenditionUrls.native} alt="Company icon" width="{companyThumbnailRenditionUrls.width*.85}" height="{companyThumbnailRenditionUrls.height*.85}" />
+          <img src={companyThumbnailRenditionUrls.native} alt="Company icon" width={companyThumbnailRenditionUrls.width * 0.85} height={companyThumbnailRenditionUrls.height * 0.85} />
         </picture>
       )}
       <h1 id="company-title">{companyTitle}</h1>

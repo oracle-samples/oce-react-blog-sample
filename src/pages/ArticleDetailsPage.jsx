@@ -6,7 +6,7 @@ import filterXSS from 'xss';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { fetchArticleDetails } from '../scripts/services';
-import dateToMDY from '../scripts/utils';
+import { dateToMDY } from '../scripts/utils';
 import Breadcrumbs from '../components/Breadcrumbs';
 
 /**

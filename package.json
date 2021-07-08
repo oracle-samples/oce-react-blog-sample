@@ -1,7 +1,7 @@
 {
   "name": "oce-react-blog-sample",
-  "version": "21.5.1",
-  "description": "",
+  "version": "21.7.1",
+  "description": "A simple blog site built using React and Oracle Content Management",
   "author": "Oracle America, Inc.",
   "license": "UPL-1.0",
   "scripts": {
@@ -19,11 +19,12 @@
     "lint": "eslint ./src --ext .js,.jsx"
   },
   "dependencies": {
-    "contentsdk": "https://samples.mycontentdemo.com/_sitesclouddelivery/renderer/app/sdk/npm/contentsdk-1.1.0.tgz",
+    "@oracle/content-management-sdk": "~1.2.0",
     "core-js": "~3.6.5",
     "dotenv": "~8.2.0",
     "express": "~4.17.1",
     "https-proxy-agent": "~5.0.0",
+    "node-fetch": "^2.6.1",
     "prop-types": "~15.7.2",
     "react": "~17.0.1",
     "react-dom": "~17.0.1",

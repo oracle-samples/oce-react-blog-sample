@@ -40,9 +40,16 @@ const config = {
       ],
     }),
     new webpack.DefinePlugin({
-      'process.env.IS_BROWSER': true
-    })
+      'process.env.IS_BROWSER': true,
+    }),
   ],
+
+  resolve: {
+    fallback: {
+      fs: false,
+      path: false,
+    },
+  },
 };
 
 // merge the base config and this config together to produce the full client config

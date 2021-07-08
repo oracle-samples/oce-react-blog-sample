@@ -5,7 +5,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import dateToMDY from '../scripts/utils';
+import { dateToMDY } from '../scripts/utils';
 
 /**
  * Component representing an Article List Item displayed in the list of articles.

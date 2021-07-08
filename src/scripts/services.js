@@ -1,14 +1,15 @@
 /**
- * Copyright (c) 2020, 2021 Oracle and/or its affiliates.
+ * Copyright (c) 2020 Oracle and/or its affiliates. All rights reserved.
  * Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
  */
 /* eslint-disable no-param-reassign */
 
-import getDeliveryClient from './server-config-utils';
+import getClient from './server-config-utils';
+import { getImageUrl } from './utils';
 
 /**
   * This file contains a number of utility methods used to obtain data
-  * from the server using the ContentSDK JavaScript Library.
+  * from the server using the Oracle Content SDK JavaScript Library.
   */
 
 /* ----------------------------------------------------
@@ -61,7 +62,7 @@ function addRendition(urls, rendition, formatstr) {
   // Get the webp format field
   const format = rendition.formats.filter((item) => item.format === `${formatstr}`)[0];
   const self = format.links.filter((item) => item.rel === 'self')[0];
-  const url = self.href;
+  const url = getImageUrl(self.href);
   const { width } = format.metadata;
 
   // Also save the jpg format so that it can be used as a default value for images
@@ -101,7 +102,7 @@ function getSourceSet(asset) {
 /**
  * Return the rendition URLs for the specified item.
  *
- * @param {DeliveryClient} client - the delivery client to get data from OCE content
+ * @param {DeliveryClient} client - the delivery client to get data from Oracle content
  * @param {string} identifier - the item id whose medium rendition URL is to be obtained
  * @returns {Promise({Object})} - A Promise containing the data
  */
@@ -120,7 +121,7 @@ function getRenditionURLs(client, identifier) {
 /**
  * Fetch details about the specific topic.
  *
- * @param {DeliveryClient} client - the delivery client to get data from OCE content
+ * @param {DeliveryClient} client - the delivery client to get data from Oracle content
  * @param {string} topicId - the id of the topic whose details are to be obtained
  * @returns {Promise({Object})} - A Promise containing the data
  */
@@ -146,7 +147,7 @@ function fetchTopic(client, topicId) {
  * The only data not returned is the company logo URL, this needs to be obtained
  * using getRenditionURL specifying the logoId.
  *
- * @param {DeliveryClient} client - the delivery client to get data from OCE content
+ * @param {DeliveryClient} client - the delivery client to get data from Oracle content
  * @returns {Promise({Object})} - A Promise containing the data
  */
 function fetchHomePage(client) {
@@ -197,7 +198,8 @@ function fetchHomePage(client) {
  * @returns {Promise({object})} - A Promise containing the data
  */
 export function getTopicsListPageData() {
-  const client = getDeliveryClient();
+  const client = getClient();
+
   return fetchHomePage(client)
     .then((data) => (
       getRenditionURLs(client, data.logoID)
@@ -226,7 +228,7 @@ export function getTopicsListPageData() {
  * @returns {Promise({object})} - A Promise containing the data
  */
 export function fetchTopicArticles(topicId) {
-  const client = getDeliveryClient();
+  const client = getClient();
   return client.queryItems({
     q: `(type eq "OCEGettingStartedArticle" AND fields.topic eq "${topicId}")`,
     orderBy: 'fields.published_date:desc',
@@ -292,10 +294,10 @@ export function fetchTopicArticles(topicId) {
  * @returns {Promise({object})} - A Promise containing the data
  */
 export function fetchArticleDetails(articleId) {
-  const client = getDeliveryClient();
+  const client = getClient();
   return client.getItem({
     id: articleId,
-    expand: 'all',
+    expand: 'fields.author,fields.image',
   }).then((article) => {
     const title = article.fields.author.name;
     const date = article.fields.published_date;
