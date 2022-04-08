@@ -1,7 +1,8 @@
 /**
- * Copyright (c) 2020, 2021 Oracle and/or its affiliates.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates.
  * Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
  */
+/* eslint-disable import/no-extraneous-dependencies */
 
 /*
  * Creates "server-bundle.js" for the server containing the Server Code and the React App.
@@ -10,7 +11,7 @@ const path = require('path');
 const { merge } = require('webpack-merge');
 const webpackNodeExternals = require('webpack-node-externals');
 const webpack = require('webpack');
-const baseConfig = require('./webpack.base.config.js');
+const baseConfig = require('./webpack.base.config');
 
 const config = {
   // inform WebPack that we are building a bundle for NodeJS rather
@@ -34,12 +35,13 @@ const config = {
   // Node can get the dependencies from node_modules on start up therefore they do not
   // have to be in the bundle
   // (unlike with the client bundle which has to have all the dependencies in it)
-  externals: [webpackNodeExternals()],
+  externals: [webpackNodeExternals(),
+    'react-helmet'],
 
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.IS_BROWSER': false
-    })
+      'process.env.IS_BROWSER': false,
+    }),
   ],
 };
 

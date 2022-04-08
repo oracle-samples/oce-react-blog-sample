@@ -1,8 +1,7 @@
 /**
- * Copyright (c) 2020, 2021 Oracle and/or its affiliates.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates.
  * Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
  */
-import { isAuthNeeded } from './server-config-utils';
 
 /**
  * Function to take a date and return it as a formatted string.
@@ -32,10 +31,11 @@ export function dateToMDY(date) {
  * @param String originalUrl the image's original url
  */
 export function getImageUrl(originalUrl) {
-  if (isAuthNeeded()) {
+  if (process.env.AUTH || process.env.AUTH_PARAMS) {
     // strip off the server URL from the front of the URL to make a relative URL
     // causing the request to go to this application's Express server
-    return originalUrl.replace(process.env.SERVER_URL, '');
+    const url = new URL(originalUrl);
+    return url.pathname + url.search;
   }
   return originalUrl;
 }

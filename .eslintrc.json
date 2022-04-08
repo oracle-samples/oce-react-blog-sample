@@ -23,6 +23,8 @@
       "react"
   ],
   "rules": {
-    "no-console": "off"
+    "no-console": "off",
+    "linebreak-style": 0,
+    "react/function-component-definition": "off"
   }
 }

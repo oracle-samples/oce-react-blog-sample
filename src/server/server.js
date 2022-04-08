@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2020, 2021 Oracle and/or its affiliates.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates.
  * Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
  */
 
@@ -13,12 +13,15 @@
 import 'core-js'; // replacement for babel-polyfill in babel 7.4 & above
 import 'regenerator-runtime/runtime'; // replacement for babel-polyfill in babel 7.4 & above
 import express from 'express';
+// If we don't import Switch, then the routing fails due to code in react-router-config
+// that references router.Switch
+// eslint-disable-next-line no-unused-vars
 import { matchPath } from 'react-router-dom';
 import http from 'http';
 import https from 'https';
 import Routes from '../pages/Routes';
 import renderer from './renderer';
-import { getAuthValue, isAuthNeeded } from '../scripts/server-config-utils';
+import getClient from '../scripts/server-config-utils';
 
 /*
  * Create an instance of an Express server
@@ -91,13 +94,10 @@ function handleContentRequest(req, res, authValue) {
  * - 'src/scripts/utils.getImageUrl' for the code proxying requests for image binaries
  */
 server.use('/content/', (req, res) => {
-  if (isAuthNeeded()) {
-    getAuthValue().then((authValue) => {
-      handleContentRequest(req, res, authValue);
-    });
-  } else {
-    handleContentRequest(req, res, '');
-  }
+  const client = getClient();
+  client.getAuthorizationHeaderValue().then((authValue) => {
+    handleContentRequest(req, res, authValue);
+  });
 });
 
 /*
@@ -129,7 +129,7 @@ server.get('*', (req, res) => {
 /*
  * Set the port the Express server is listening on
  */
-const port = process.env.EXPRESS_SERVER_PORT || 8080;
+const port = process.env.PORT || 8080;
 server.listen(port, () => {
-  console.log(`Application is accesssible on : http://localhost:${port}`);
+  console.log(`Application is accessible on : http://localhost:${port}`);
 });

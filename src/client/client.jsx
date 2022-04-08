@@ -1,6 +1,6 @@
 /**
  * @license
- * Copyright (c) 2020, 2021 Oracle and/or its affiliates.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates.
  * Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
  */
 
@@ -19,7 +19,7 @@ import { renderRoutes } from 'react-router-config';
 import Routes from '../pages/Routes';
 
 // Client side React Router uses the BrowserRouter
-// (as apposed to the StaticRouter used on the server)
+// (as apposed to the StaticRouter used on the server).
 ReactDOM.hydrate(
   <BrowserRouter basename={process.env.BASE_URL}>
     <div>{renderRoutes(Routes)}</div>

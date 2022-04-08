@@ -1,22 +1,18 @@
 /**
- * Copyright (c) 2020 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates.
  * Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
  */
 /* eslint-disable no-param-reassign */
+
+/**
+ * This file contains a number of utility methods used to obtain data
+ * from the server using the Oracle Content SDK JavaScript Library.
+ */
 
 import getClient from './server-config-utils';
 import { getImageUrl } from './utils';
 
 /**
-  * This file contains a number of utility methods used to obtain data
-  * from the server using the Oracle Content SDK JavaScript Library.
-  */
-
-/* ----------------------------------------------------
- * Common Utils
- * ---------------------------------------------------- */
-
-/*
  * Utility method to log an error.
  */
 function logError(message, error) {

@@ -1,9 +1,10 @@
 /**
- * Copyright (c) 2020, 2021 Oracle and/or its affiliates.
+ * Copyright (c) 2020, 2022, Oracle and/or its affiliates.
  * Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
  */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 import { getTopicsListPageData } from '../scripts/services';
 
 import Header from '../components/Header';
@@ -71,6 +72,10 @@ class TopicsListPage extends React.Component {
     } = data;
     return (
       <div data-testid="TopicsListContainer">
+        <Helmet>
+          <meta name="BUILD_TAG" content={`${process.env.BUILD_TAG}`} />
+          <meta name="@oracle/gatsby-source-oce" content={`${process.env.SDK_VERSION}`} />
+        </Helmet>
         <Header
           companyTitle={companyTitle}
           companyThumbnailRenditionUrls={companyThumbnailRenditionUrls}
