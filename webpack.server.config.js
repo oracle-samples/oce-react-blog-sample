@@ -41,6 +41,8 @@ const config = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.IS_BROWSER': false,
+      'process.env.AUTH': JSON.stringify(process.env.AUTH),
+      'process.env.AUTH_PARAMS': JSON.stringify(process.env.AUTH_PARAMS),
     }),
   ],
 };

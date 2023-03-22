@@ -8,18 +8,16 @@
  */
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { renderToString } from 'react-dom/server';
-import { StaticRouter } from 'react-router-dom';
-import { renderRoutes } from 'react-router-config';
+import ReactDOMServer from 'react-dom/server';
+import { StaticRouter } from 'react-router-dom/server';
 import serialize from 'serialize-javascript';
+import App from '../pages/App';
 
-import Routes from '../pages/Routes';
-
-export default (req, context) => {
+export default (req, serverData) => {
   // generate the HTML content for this application
-  const content = renderToString(
-    <StaticRouter context={context} location={req.path} basename={process.env.BASE_URL}>
-      <div>{renderRoutes(Routes)}</div>
+  const content = ReactDOMServer.renderToString(
+    <StaticRouter location={req.path} basename={process.env.BASE_URL}>
+      <App serverData={serverData} />
     </StaticRouter>,
   );
   const helmet = Helmet.renderStatic();
@@ -58,7 +56,7 @@ export default (req, context) => {
       <body>
         <div id="root">${content}</div>
         <script>
-          window.INITIAL_DATA = ${serialize(context.data)}
+          window.INITIAL_DATA = ${serialize(serverData)}
         </script>
         <script src="${clientBundleFile}"></script>
       </body>

@@ -31,7 +31,7 @@ export function dateToMDY(date) {
  * @param String originalUrl the image's original url
  */
 export function getImageUrl(originalUrl) {
-  if (process.env.AUTH || process.env.AUTH_PARAMS) {
+  if (process.env.CONTENT_MODE !== 'delivery') {
     // strip off the server URL from the front of the URL to make a relative URL
     // causing the request to go to this application's Express server
     const url = new URL(originalUrl);

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2020, 2022, Oracle and/or its affiliates.
+ * Copyright (c) 2021, 2022, Oracle and/or its affiliates.
  * Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
  */
 
@@ -9,31 +9,27 @@
 import TopicsListPage from './TopicsListPage';
 import ArticlesListPage from './ArticlesListPage';
 import ArticleDetailsPage from './ArticleDetailsPage';
-import NotFoundPage from './NotFoundPage';
+import { getTopicsListPageData, fetchTopicArticles, fetchArticleDetails } from '../scripts/services';
 
-export default [
+const routes = [
   {
-    ...TopicsListPage,
     path: '/',
-    exact: true,
+    component: TopicsListPage,
+    fetchInitialData: () => getTopicsListPageData(),
     title: 'Topics',
   },
   {
-    ...ArticlesListPage,
     path: '/articles/:topicId',
-    exact: true,
+    component: ArticlesListPage,
+    fetchInitialData: (path) => fetchTopicArticles(path.split('/').pop()),
     title: 'Articles',
   },
   {
-    ...ArticleDetailsPage,
     path: '/article/:articleId',
-    exact: true,
+    component: ArticleDetailsPage,
+    fetchInitialData: (path) => fetchArticleDetails(path.split('/').pop()),
     title: 'Article',
   },
-  {
-    ...NotFoundPage,
-    path: '*',
-    exact: false,
-    title: 'Page Not Found',
-  },
 ];
+
+export default routes;

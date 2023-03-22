@@ -28,26 +28,6 @@ function logError(message, error) {
 }
 
 /**
- * Flattens an array of arrays into a single array.
- *
- * Note:  ES6's array.flat() is not supported in Node pre version 11 so flatten manually.
- *
- * @param {Array} inArray - the array of arrays to flatten
- * @param {Array} result - the flattened array
- */
-function flattenArray(inArray, result = []) {
-  for (let i = 0, { length } = inArray; i < length; i += 1) {
-    const arrayElement = inArray[i];
-    if (Array.isArray(arrayElement)) {
-      flattenArray(arrayElement, result);
-    } else {
-      result.push(arrayElement);
-    }
-  }
-  return result;
-}
-
-/**
  * Private method for adding the specified format rendition to the rendition string
  *
  * @param {Object} url - the url which contains the rendition strings
@@ -57,16 +37,18 @@ function flattenArray(inArray, result = []) {
 function addRendition(urls, rendition, formatstr) {
   // Get the webp format field
   const format = rendition.formats.filter((item) => item.format === `${formatstr}`)[0];
-  const self = format.links.filter((item) => item.rel === 'self')[0];
-  const url = getImageUrl(self.href);
-  const { width } = format.metadata;
+  if (format !== undefined) {
+    const self = format.links.filter((item) => item.rel === 'self')[0];
+    const url = getImageUrl(self.href);
+    const { width } = format.metadata;
 
-  // Also save the jpg format so that it can be used as a default value for images
-  if (formatstr === 'jpg') {
-    urls[rendition.name.toLowerCase()] = url;
-    urls.jpgSrcset += `${url} ${width}w,`;
-  } else {
-    urls.srcset += `${url} ${width}w,`;
+    // Also save the jpg format so that it can be used as a default value for images
+    if (formatstr === 'jpg') {
+      urls[rendition.name.toLowerCase()] = url;
+      urls.jpgSrcset += `${url} ${width}w,`;
+    } else {
+      urls.srcset += `${url} ${width}w,`;
+    }
   }
 }
 
@@ -84,6 +66,7 @@ function getSourceSet(asset) {
   if (asset.fields && asset.fields.renditions) {
     asset.fields.renditions.forEach((rendition) => {
       addRendition(urls, rendition, 'jpg');
+      addRendition(urls, rendition, 'png');
       addRendition(urls, rendition, 'webp');
     });
   }
@@ -175,7 +158,7 @@ function fetchHomePage(client) {
           companyTitle: title,
           aboutUrl,
           contactUrl,
-          topics: flattenArray(allTopics),
+          topics: allTopics.flat(),
         }
       )).catch((error) => logError('Fetching topics failed', error));
   }).catch((error) => logError('Fetching home page data failed', error));
@@ -261,7 +244,7 @@ export function fetchTopicArticles(topicId) {
     return Promise.all(promises)
       .then((allArticles) => ({
         topicId,
-        articles: flattenArray(allArticles),
+        articles: allArticles.flat(),
       }));
   }).catch((error) => logError('Fetching topic articles failed', error));
 }

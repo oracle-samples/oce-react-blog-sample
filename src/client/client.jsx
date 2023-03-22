@@ -14,15 +14,13 @@ import 'regenerator-runtime/runtime'; // replacement for babel-polyfill in babel
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import { renderRoutes } from 'react-router-config';
-
-import Routes from '../pages/Routes';
+import App from '../pages/App';
 
 // Client side React Router uses the BrowserRouter
 // (as apposed to the StaticRouter used on the server).
 ReactDOM.hydrate(
   <BrowserRouter basename={process.env.BASE_URL}>
-    <div>{renderRoutes(Routes)}</div>
+    <App />
   </BrowserRouter>,
   document.querySelector('#root'),
 );

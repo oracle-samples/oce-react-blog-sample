@@ -44,18 +44,10 @@ export default function getClient() {
   // - 'src/scripts/utils.getImageUrl' for the code proxying requests for image binaries
   // - 'src/server/server' for the Express server proxying.
   if (clientInstance === null) {
-    const serverURL = ((process.env.AUTH || process.env.AUTH_PARAMS) && process.env.IS_BROWSER)
-      ? `${window.location.origin}/`
-      : process.env.SERVER_URL;
-
-    let authParams = null;
-    if (process.env.AUTH_PARAMS) {
-      authParams = {};
-      const oauthParamsParsed = JSON.parse(process.env.AUTH_PARAMS);
-      authParams.clientId = oauthParamsParsed.CLIENT_ID;
-      authParams.clientSecret = oauthParamsParsed.CLIENT_SECRET;
-      authParams.clientScopeUrl = oauthParamsParsed.CLIENT_SCOPE_URL;
-      authParams.idpUrl = oauthParamsParsed.IDP_URL;
+    let serverURL = process.env.SERVER_URL;
+    if (process.env.IS_BROWSER && process.env.CONTENT_MODE !== 'delivery') {
+      // proxy all requests through NodeJS server (on window location) to add auth headers
+      serverURL = `${window.location.origin}/`;
     }
 
     const serverconfig = {
@@ -63,15 +55,26 @@ export default function getClient() {
       contentVersion: process.env.API_VERSION,
       channelToken: process.env.CHANNEL_TOKEN,
       options: process.env.OPTIONS ? JSON.parse(process.env.OPTIONS) : null,
-      authorization: process.env.AUTH,
-      authorizationParams: authParams,
     };
+
+    let authParams = null;
+    if (!process.env.IS_BROWSER && process.env.CONTENT_MODE !== 'delivery') {
+      authParams = {};
+      const oauthParamsParsed = JSON.parse(process.env.AUTH_PARAMS);
+      authParams.clientId = oauthParamsParsed.CLIENT_ID;
+      authParams.clientSecret = oauthParamsParsed.CLIENT_SECRET;
+      authParams.clientScopeUrl = oauthParamsParsed.CLIENT_SCOPE_URL;
+      authParams.idpUrl = oauthParamsParsed.IDP_URL;
+
+      serverconfig.authorization = process.env.AUTH;
+      serverconfig.authorizationParams = authParams;
+    }
 
     // Add the following if you want logging from the Oracle Content SDK shown in the console
     // serverconfig.logger = console;
 
     // create and return the relevant client
-    if (process.env.PREVIEW === 'true') {
+    if (process.env.CONTENT_MODE === 'preview') {
       clientInstance = createPreviewClient(serverconfig);
     } else {
       clientInstance = createDeliveryClient(serverconfig);
